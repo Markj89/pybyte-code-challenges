@@ -23,19 +23,35 @@ Namespaces are one honking great idea -- let's do more of those!
 """
 vowels = 'aeiou'
 
+def strip_vowels(text=text):
+    text = text.split("\n")
+    
+    for words in text:
+        words = words.split(" ,")
+        for letter in words:
+            ##if letter in vowels:
+                ##letter = letter.replace(letter, '*')
+            
+            print(letter)
+    ##for words in (word.strip() for word in text.splitlines())
+    
+    #print(text)
+                
+    
+strip_vowels();
 
-def strip_vowels(text: str) -> (str, int):
-    """Replace all vowels in the input text string by a star
-       character (*).
-       Return a tuple of (replaced_text, number_of_vowels_found)
+##def strip_vowels(text: str) -> (str, int):
+    ##"""Replace all vowels in the input text string by a star
+    ##    character (*).
+    ##    Return a tuple of (replaced_text, number_of_vowels_found)
+        
+    ##    So if this function is called like:
+    ##    strip_vowels('hello world')
 
-       So if this function is called like:
-       strip_vowels('hello world')
+   ##... it would return:
+   ##('h*ll* w*rld', 3)
 
-       ... it would return:
-       ('h*ll* w*rld', 3)
-
-       The str/int types in the function defintion above are part
-       of Python's new type hinting:
-       https://docs.python.org/3/library/typing.html"""
-    pass
+   ##The str/int types in the function defintion above are part
+   ##of Python's new type hinting:
+   ##https://docs.python.org/3/library/typing.html"""
+##pass
