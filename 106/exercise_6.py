@@ -24,21 +24,41 @@ Namespaces are one honking great idea -- let's do more of those!
 vowels = 'aeiou'
 
 def strip_vowels(text=text):
+    
+    # vars
+    zen_list = []
+    count = 0
+    
+    # Convert string to list
     text = text.split("\n")
     
+    # Lets makes some loops...
     for words in text:
-        words = words.split(" ,")
+        
+        # Cont..
         for letter in words:
-            ##if letter in vowels:
-                ##letter = letter.replace(letter, '*')
             
-            print(letter)
-    ##for words in (word.strip() for word in text.splitlines())
+            # If vowel is present
+            if letter in vowels:
+                letter = letter.replace(letter, '*')
+            
+            # Append to new string    
+            zen_list.append(letter)
+            
+    str = ''.join(zen_list) 
+    return str
     
-    #print(text)
-                
+print(strip_vowels())
     
-strip_vowels();
+def count_vowels(updated_text):
+    
+    # Initializing count variable to 0
+    count = 0
+    while updated_text:
+        count = count + 1
+                              
+    return count
+
 
 ##def strip_vowels(text: str) -> (str, int):
     ##"""Replace all vowels in the input text string by a star
