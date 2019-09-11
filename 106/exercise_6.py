@@ -32,7 +32,7 @@ def number_of_vowels_found(updated_text):
         if '*' in updated_word:                
                 
             # Lets count it up!
-            count = count + 1
+            count += 1
                               
     return count
 
@@ -43,7 +43,7 @@ def replaced_text(text=text):
     zen_list = []
     
     # Convert string to list
-    text = text.split("\n")
+    text = text.split('\n')
     
     # Lets makes some loops...
     for words in text:
@@ -58,29 +58,14 @@ def replaced_text(text=text):
                 letter = letter.replace(letter, '*')
 
             # Append to new string    
-            zen_list.append(letter)
-    
+            zen_list.append(letter)            
         number_of_vowels_found(zen_list)    
     str = ''.join(zen_list)
     return str
     
-#print(replaced_text())
-output = number_of_vowels_found(replaced_text())
+str = ( replaced_text(), number_of_vowels_found(replaced_text()) )
 
-print(output)
-
-##def strip_vowels(text: str) -> (str, int):
-    ##"""Replace all vowels in the input text string by a star
-    ##    character (*).
-    ##    Return a tuple of (replaced_text, number_of_vowels_found)
-        
-    ##    So if this function is called like:
-    ##    strip_vowels('hello world')
-
-   ##... it would return:
-   ##('h*ll* w*rld', 3)
-
-   ##The str/int types in the function defintion above are part
-   ##of Python's new type hinting:
-   ##https://docs.python.org/3/library/typing.html"""
-##pass
+def strip_vowels(str=str):
+    return str
+    
+print(strip_vowels())
