@@ -22,50 +22,51 @@ If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
 """
 vowels = 'aeiou'    
+vowels = list(vowels)
 
-def number_of_vowels_found(updated_text):
+
+def strip_vowels(text: str) -> (str, int):
+    """Replace all vowels in the input text string by a star
+        character (*).
+        Return a tuple of (replaced_text, number_of_vowels_found)
+        So if this function is called like:
+        strip_vowels('hello world')
+        ... it would return:
+        ('h*ll* w*rld', 3)
+        The str/int types in the function defintion above are part
+        of Python's new type hinting:
+        https://docs.python.org/3/library/typing.html"""
+
+    # vars
+    zen_list = list()
     
+    words = ""
+
     # Initializing count variable to 0
     count = 0
     
-    for updated_word in updated_text:
-        if '*' in updated_word:                
-                
-            # Lets count it up!
-            count += 1
-                              
-    return count
-
-
-def replaced_text(text=text):
-    
-    # vars
-    zen_list = []
-    
     # Convert string to list
-    text = text.split('\n')
-    
-    # Lets makes some loops...
-    for words in text:
+    text = list(text)
         
-        # Cont..
-        for letter in words:
+    # Lets makes some loops...
+    for letter in text:
+        bigvowels = 'AEIOU'
+    
+        # If vowel is present
+        if letter in vowels or letter in bigvowels:
             
-            # If vowel is present
-            if letter in vowels:
-                    
-                # Pass the value
-                letter = letter.replace(letter, '*')
+            # Pass the value
+            letter = letter.replace(letter, "*")
+            count += 1
 
-            # Append to new string    
-            zen_list.append(letter)            
-        number_of_vowels_found(zen_list)    
+        # Append to new string  
+        zen_list.append(letter)
+                       
+        #number_of_vowels_found(zen_list)
+          
     str = ''.join(zen_list)
-    return str
+    updated_str = (str, count)
     
-str = ( replaced_text(), number_of_vowels_found(replaced_text()) )
-
-def strip_vowels(str=str):
-    return str
+    return updated_str
     
-print(strip_vowels())
+    pass
