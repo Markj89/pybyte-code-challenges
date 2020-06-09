@@ -1,6 +1,6 @@
 # Bites of Py Exercises
 
-These are my submissions to the Pybites 100 Days challenges
+These are my submissions to the Intro to Bites challenges
 
 ## Prerequisites
 - Python
@@ -16,3 +16,4 @@ Marcus Jackson - marcusj98@gmail.com
 - Bite 106. Strip out vowels and count the number of replacements
 - Bite 107. Filter numbers with a list comprehension
 - Bite 108. Loop over a dict of namedtuples calculating a total score
+- Bite 109. Workout dict lookups and raising an exception
